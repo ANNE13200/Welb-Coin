@@ -25,11 +25,14 @@ const Farms: React.FC = () => {
         {!!account ? (
           <>
             <Route exact path={path}>
+             
               <PageHeader
                 icon={<img src={chef} height="120" />}
-                subtitle="Earn WELB tokens by staking WelbSwap V2 SLP Tokens. Note: Current APY includes 2/3rd WELB emission that is locked and will be retroactively disbursed at a later date."
-                title="Select Your Favorite Dishes"
+                subtitle=""
+                title=""
               />
+               <h1 style={{"textAlign":"center","color":"#fff"}}>Select Your Favorite Dishes</h1>
+               <p style={{"textAlign":"center","color":"#fff"}}>Earn WELB tokens by staking WelbSwap V2 SLP Tokens. <br /> Note: Current APY includes 2/3rd WELB emission <br /> that is locked and will be retroactively <br /> disbursed at a later date.</p>
               <FarmCards />
             </Route>
             <Route path={`${path}/:farmId`}>

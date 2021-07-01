@@ -58,9 +58,11 @@ const Farm: React.FC = () => {
     <>
       <PageHeader
         icon={icon}
-        subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
-        title={name}
+        subtitle={""}
+        title=""
       />
+      <h1 style={{"textAlign":"center","color":"#fff"}}>{name}</h1>
+      <h2 style={{"textAlign":"center","color":"#fff"}}>Deposit {lpTokenName}  Tokens and earn {earnTokenName}</h2>
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>

@@ -24,9 +24,12 @@ const Staking: React.FC = () => {
             <Route exact path={path}>
               <PageHeader
                 icon={<img src={chef} height="120"/>}
-                subtitle="Welcome to the Welb Bar, stake Welb to earn Welb."
-                title="Stake Now..!!!"
+               
+                
               />
+              
+              <h1 style={{"textAlign":"center","color":"#fff"}}>Stake Now</h1>
+              <h2 style={{"textAlign":"center","color":"#fff"}}>Welcome to the Welb Bar, stake Welb to earn Welb.</h2>
             </Route>
             <StakeXWelb/>
           </>

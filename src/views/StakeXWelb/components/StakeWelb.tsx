@@ -60,14 +60,14 @@ const StakeWelb: React.FC<StakeProps> = ({}) => {
           <StyledCardHeader>
             <CardIcon>👨🏻‍🍳</CardIcon>
             <Value value={getBalanceNumber(tokenBalance)}/>
-            <Label text={`sWELB Tokens Available`}/>
+            <Label text={`WELB Tokens Available`}/>
           </StyledCardHeader>
           <StyledCardActions>
             {!allowance.toNumber() ? (
               <Button
                 disabled={requestedApproval}
                 onClick={handleApprove}
-                text={`Approve sWELB`}
+                text={`Approve WELB`}
               />
             ) : (
               <>
