@@ -26,16 +26,16 @@ export const INTEGERS = {
 
 export const contractAddresses = {
   welb: {
-    56: '0x2c4a33373FEaa97b9D75bD78Dfd9919aD4dAe6Da',
+    56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
   },
   masterChef: {
-    56: '0x7Aad99a353c95C4d427530f64f7fDe2A185A72Fd',
+    56: '0x5F1A5911C1A363D96f4Dc8bAF0E3e4A3EB268c58',
   },
   weth: {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
   },
   xWelb: {
-    56: '0x3d7783B68f0c1f335026E9e91Aa29a23B34F48B3'
+    56: '0xC4142cD91be82668C12d390FC1DeB6c04E46561d'
   }
 }
 
@@ -53,7 +53,7 @@ export const supportedPools = [
     name: 'Welb Exercises!',
     symbol: 'WELB-WETH',
     tokenSymbol: 'WELB',
-    icon: '⚖️',
+    icon: '🏋️‍♀️',
   },
  
 ]
