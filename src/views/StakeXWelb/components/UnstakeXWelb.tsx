@@ -40,7 +40,7 @@ const UnstakeXWelb: React.FC<HarvestProps> = ({lpContract}) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>⚖️</CardIcon>
+            <CardIcon>🏆</CardIcon>
             <Value value={getBalanceNumber(xWelbBalance)}/>
             <Label text="xWELB (WelbBar) Available"/>
           </StyledCardHeader>
