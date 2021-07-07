@@ -53,7 +53,7 @@ export const supportedPools = [
     name: 'WELB BOXE!',
     symbol: 'WELB-WBNB',
     tokenSymbol: 'WELB',
-    icon: '🚴‍♂️',
+    icon: '🥊',
   },
   {
     pid: 1,
