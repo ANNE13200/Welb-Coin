@@ -6,7 +6,7 @@ const Nav: React.FC = () => {
     <StyledNav>
       <StyledLink
         target="_blank"
-        href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code"
+        href="https://bscscan.com/address/0x5F1A5911C1A363D96f4Dc8bAF0E3e4A3EB268c58"
       >
         MasterChef Contract
       </StyledLink>
@@ -16,16 +16,16 @@ const Nav: React.FC = () => {
       >
         WelbSwap WELB-BNB
       </StyledLink> */}
-      <StyledLink target="_blank" href="#">
-        Discord
+      <StyledLink target="_blank" href="t.me/wellbecoingroupe">
+        Telegram
       </StyledLink>
-      <StyledLink target="_blank" href="#">
+      <StyledLink target="_blank" href="https://github.com/ANNE13200">
         Github
       </StyledLink>
-      <StyledLink target="_blank" href="#p">
+      <StyledLink target="_blank" href="https://twitter.com/WellbeCoin">
         Twitter
       </StyledLink>
-      <StyledLink target="_blank" href="#">
+      <StyledLink target="_blank" href="https://cyclon13200.medium.com/">
         Medium
       </StyledLink>
     </StyledNav>
