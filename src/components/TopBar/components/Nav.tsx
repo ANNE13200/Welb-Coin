@@ -21,6 +21,13 @@ const Nav: React.FC = () => {
         Exchange
       </StyledAbsoluteLink>
       
+      <StyledAbsoluteLink
+        href="https://www.wellbe-coin.com/t-en-gb/contact"
+        target="_blank"
+      >
+        Contact
+      </StyledAbsoluteLink>
+      
     </StyledNav>
   )
 }
