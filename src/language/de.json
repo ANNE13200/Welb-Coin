@@ -1,0 +1,41 @@
+{
+  "lang": {
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "home": {
+    "ready": "WELLBE COIN ist bereit für dich..!!",
+    "stake": "Setzen Sie WELB-Swap-LP-Token ein, um Ihr eigenes WELB zu beanspruchen!",
+    "pro-tip": "\uD83C\uDFC6<strong>Unsere Empfehlung</strong>: WELB-BNB SLP Token Pool bringt <i>0,5x</i> mehr Token-Belohnungen pro Block.",
+    "btnfarm": "\uD83D\uDD2A Auf zur Farm"
+  },
+  "balances": {
+    "yourwelb": "Dein WELB Guthaben",
+    "totalwelb": "Gesamte WELB Versorgung",
+    "account": "Gesperrt",
+    "harvest": "Ausstehende Ernte",
+    "reward": "Neue Belohnungen pro Block"
+  },
+  "wallet": {
+    "unlock": "Wallet Verbinden",
+    "lock": "Abmelden",
+    "mywallet": "Mein Wallet",
+    "provider": "Wähle einen Wallet Provider",
+    "btncancel": "Abbrechen",
+    "btnconnect": "Verbinden",
+    "myaccount": "Mein Account",
+    "viewbsc": "Auf BSCScan schauen",
+    "balance": "Ihr WELB vorrat"
+  },
+  "disclaimermodal": {
+    "modalcontent": {
+      "titel": "Ankündigung",
+      "p1": "Mit großer Freude möchten wir Sie zum Launch von Welb einladen!",
+      "p2": "Welb wird die Heimat unseres neuen Frontends und bietet eine Schnittstelle für alle Interaktionen mit dem WelbSwap-Protokoll.",
+      "p3": "Die Entwicklung wird weitergehen und WelbSwap wird in der Zwischenzeit weiterhin bestehen, während wir daran arbeiten, Welb vollständig aufpolieren zu lassen."
+    },
+    "btnnext": "Weiter",
+    "btnaccess": "Klicke hier, um auf Welb zuzugreifen",
+    "btncontinue": "Weiter zu Classic"
+  }
+}

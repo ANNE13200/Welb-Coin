@@ -1,0 +1,41 @@
+{
+  "lang": {
+    "de": "German",
+    "en": "English"
+  },
+  "home": {
+    "ready": "WELLBE COIN is Ready For You..!!",
+    "stake": "Stake WELB-Swap LP tokens to claim your very own WELB!",
+    "pro-tip": "\uD83C\uDFC6<strong>Pro Tip</strong>: WELB-BNB SLP token pool yields <i>0.5x</i> more token rewards per block.",
+    "btnfarm": "\uD83D\uDD2A  See the Farm"
+  },
+  "balances": {
+    "yourwelb": "Your WELB Balance",
+    "totalwelb": "Total WELB Supply",
+    "account": "Locked",
+    "harvest": "Pending harvest",
+    "reward": "New rewards per block"
+  },
+  "wallet": {
+    "unlock": "Unlock Wallet",
+    "lock": "Sign out",
+    "mywallet": "My Wallet",
+    "provider": "Select a wallet provider",
+    "btncancel": "Cancel",
+    "btnconnect": "Connect",
+    "myaccount": "My Account",
+    "viewbsc": "View on BSCScan",
+    "balance": "WELB Balance"
+  },
+  "disclaimermodal": {
+    "modalcontent": {
+      "titel": "Announcement",
+      "p1": "With great pleasure we would like to invite you the launch of Welb!",
+      "p2": "Welb will be the home of our new frontend, and provides an interface for all interactions with the WelbSwap protocol.",
+      "p3": "Development will be on going, and welbswap will still exist in the interim as we work to get Welb completely polished."
+    },
+    "btnnext": "Next",
+    "btnaccess": "Click here to access Welb",
+    "btncontinue": "Continue To Classic"
+  }
+}
