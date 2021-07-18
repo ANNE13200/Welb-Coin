@@ -6,12 +6,20 @@ import Logo from '../Logo'
 
 import AccountButton from './components/AccountButton'
 import Nav from './components/Nav'
+import Select from "../Select";
+
+
+
+
+
 
 interface TopBarProps {
   onPresentMobileMenu: () => void
 }
 
 const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
+
+
   return (
     <StyledTopBar>
       <Container size="lg">
@@ -20,6 +28,7 @@ const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
             <Logo />
           </StyledLogoWrapper>
           <Nav />
+          <Select/>
           <StyledAccountButtonWrapper>
             <AccountButton />
           </StyledAccountButtonWrapper>
