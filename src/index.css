@@ -1,5 +1,6 @@
 body {
-  background-image: url(assets/img/bg.jpg);
+  background: url(assets/img/bg.jpg) no-repeat center center;
+  background-size: cover;
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
@@ -9,5 +10,21 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+div.modal p {
+  color: #b3cde0;
+}
+
+.center {
+  text-align: center;
+}
+
+.center a{
+  padding-left: 0;
+}
+
+.mar-lr-8{
+  margin: 0 8px;
 }

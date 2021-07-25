@@ -12,6 +12,7 @@ import {contractAddresses} from '../../welb/lib/constants'
 import {getXWelbSupply} from "../../welb/utils";
 import BigNumber from "bignumber.js";
 import {getBalanceNumber} from "../../utils/formatBalance";
+import {Trans, useTranslation} from "react-i18next";
 
 const StakeXWelb: React.FC = () => {
   const {
@@ -24,6 +25,8 @@ const StakeXWelb: React.FC = () => {
 
   const welb = useWelb()
   const {ethereum} = useWallet()
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -46,6 +49,13 @@ const StakeXWelb: React.FC = () => {
     return getContract(ethereum as provider, tokenAddress)
   }, [ethereum, tokenAddress])
 
+  let _totalSupplyBalance =  "0";
+  if(totalSupply){
+    _totalSupplyBalance = `${getBalanceNumber(totalSupply)}`
+  }else{
+    _totalSupplyBalance = "0";
+  }
+
   return (
     <>
       <StyledFarm>
@@ -65,11 +75,18 @@ const StakeXWelb: React.FC = () => {
         <StyledCardsWrapper>
           <StyledCardWrapper>
             <StyledInfo>
-              ℹ️️ You will earn a portion of the swaps fees based on the amount
-              of xWelb held relative the weight of the staking. xWelb can be minted
-              by staking Welb. To redeem Welb staked plus swap fees convert xWelb
-              back to Welb. {totalSupply ? `There are currently ${getBalanceNumber(totalSupply)} xWELB in the whole pool.` : '' }
+              { t("staking.info.p1") }
+              { t("staking.info.p2") }
+              { t("staking.info.p3") }
             </StyledInfo>
+            <Spacer/>
+            {!!totalSupply ? (
+            <StyledInfo>
+              <Trans i18nKey="staking.info.total-staked" tOptions={{_totalSupply: _totalSupplyBalance}}>
+                There are currently <strong>{_totalSupplyBalance} xWELB</strong> in the whole pool.
+              </Trans>
+            </StyledInfo>
+            ) : null }
           </StyledCardWrapper>
         </StyledCardsWrapper>
         <Spacer size="lg"/>

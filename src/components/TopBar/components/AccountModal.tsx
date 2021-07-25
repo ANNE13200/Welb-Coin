@@ -14,6 +14,7 @@ import ModalContent from '../../ModalContent'
 import ModalTitle from '../../ModalTitle'
 import Spacer from '../../Spacer'
 import Value from '../../Value'
+import { useTranslation } from "react-i18next";
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const { account, reset } = useWallet()
@@ -25,10 +26,12 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
   const welb = useWelb()
   const welbBalance = useTokenBalance(getWelbAddress(welb))
+  const { t } = useTranslation();
+
 
   return (
     <Modal>
-      <ModalTitle text="My Account" />
+      <ModalTitle text={t("wallet.myaccount")} />
       <ModalContent>
         <Spacer />
 
@@ -39,26 +42,26 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
             </CardIcon>
             <StyledBalance>
               <Value value={getBalanceNumber(welbBalance)} />
-              <Label text="WELB Balance" />
+              <Label text={t("wallet.balance")} />
             </StyledBalance>
           </StyledBalanceWrapper>
         </div>
 
         <Spacer />
         <Button
-          href={`https://etherscan.io/address/${account}`}
-          text="View on Etherscan"
+          href={`https://bscscan.com/address/${account}`}
+          text={t("wallet.viewbsc")}
           variant="secondary"
         />
         <Spacer />
         <Button
           onClick={handleSignOutClick}
-          text="Sign out"
+          text={t("wallet.lock")}
           variant="secondary"
         />
       </ModalContent>
       <ModalActions>
-        <Button onClick={onDismiss} text="Cancel" />
+        <Button onClick={onDismiss} text={t("wallet.btncancel")} />
       </ModalActions>
     </Modal>
   )

@@ -1,0 +1,122 @@
+{
+  "lang": {
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "linkname": {
+    "home": "Home",
+    "farm": "Farms",
+    "staking": "Pool",
+    "exchange": "Börse",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "ready": "WELLBE COIN ist bereit für dich..!!",
+    "stake": "Setzen Sie WELB-Swap-LP-Token ein, um Ihr eigenes WELB zu beanspruchen!",
+    "pro-tip": "\uD83C\uDFC6<strong>Unsere Empfehlung</strong>: WELB-BNB SLP Token Pool bringt <i>0,5x</i> mehr Token-Belohnungen pro Block.",
+    "btnfarm": "\uD83D\uDD2A Auf zur Farm"
+  },
+  "staking": {
+    "title": "WELB Pool",
+    "subtitle": "Willkommen in der WelbBar, fügen Sie xWELB zum Pool hinzu und verdienen Sie WELB.",
+    "balance": {
+      "xwelb": "xWELB (WelbBar) Verfügbar",
+      "welb": "WELB Token Verfügbar"
+    },
+    "btn": {
+      "covert-to-welb": "In WELB Umwandeln",
+      "covert-to-welb-progress": "Umstellung auf WELB",
+      "convert-to-xwelb": "In xWELB Umwandeln"
+    },
+    "info":{
+      "p1": "ℹ️Sie erhalten einen Teil der Swap-Gebühren basierend auf der Menge an xWELB, ",
+      "p2": "die im Verhältnis zum Gewicht des Einsatzes gehalten wird. xWELB kann durch Staken ",
+      "p3": "von WELB geprägt werden. Um WELB-Stakes plus Swap-Gebühren einzulösen, konvertieren Sie xWELB zurück in WELB.",
+      "total-staked": "Es befinden sich aktuell <strong>{{_totalSupply}} xWELB</strong> im gesamten Pool."
+    },
+    "modal": {
+      "withdraw": {
+        "title": "{{token}} Token Abheben",
+        "available": "Verfügbar"
+      },
+      "desposit": {
+        "title": "{{token}} Token Einzahlen",
+        "available": "Verfügbar"
+      },
+      "btn": {
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "pending": "Ausstehende Bestätigung"
+      }
+    }
+  },
+  "farms": {
+    "title": "Wähle deine lieblings Farm",
+    "subtitle": {
+      "p1": "Verdienen Sie WELB-Token, indem Sie WelbSwap V2 SLP-Token Staken.",
+      "p2": "Hinweis: Aktueller APY beinhaltet 2/3. WELB-Emission,",
+      "p3": " die gesperrt ist und zu einem späteren Zeitpunkt",
+      "p4": " rückwirkend ausgezahlt wird."
+    },
+    "deposit": "Stake",
+    "earn": "verdiene",
+    "select": "Auswählen",
+    "disabled": "Bald verfügbar",
+    "apy-text": "Laden ...",
+    "farm-selected": {
+      "subtitle": "Setzen Sie {{_lpTokenName}} LP-Token und verdiene {{_earnTokenName}}",
+      "info": "⭐️Jedes Mal, wenn Sie LP-Token Setzen und entfernen, erntet der Vertrag automatisch WELB-Belohnungen für Sie!",
+      "earned": "{{_lpTokenName}} verdient",
+      "lp-stake": "{{_tokenName}} LP-Token eingesetzt",
+      "lp-unstake": "Entfernen",
+      "modal": {
+        "withdraw": {
+          "title": "{{_tokenName}} LP-Token Abheben"
+        },
+        "desposit": {
+          "title": "{{_tokenName}} LP-Token Einzahlen"
+        },
+        "btn": {
+          "cancel": "Abbrechen",
+          "confirm": "Bestätigen",
+          "pending": "Ausstehende Bestätigung"
+        }
+      },
+      "harvest": {
+        "title": "{{_tokenName}} verdient",
+        "harvest": "Belohnung Anfordern",
+        "collect": "{{_tokenName}}-Sammeln"
+      }
+    }
+  },
+  "balances": {
+    "yourwelb": "Dein WELB Guthaben",
+    "totalwelb": "Gesamte WELB Versorgung",
+    "account": "Gesperrt",
+    "harvest": "Ausstehende Ernte",
+    "reward": "Neue Belohnungen pro Block"
+  },
+  "wallet": {
+    "unlock": "Wallet Verbinden",
+    "unlock-icon": "\uD83D\uDD13 Wallet Verbinden",
+    "lock": "Abmelden",
+    "mywallet": "Meine Wallet",
+    "provider": "Wähle einen Wallet Provider",
+    "btncancel": "Abbrechen",
+    "btnconnect": "Verbinden",
+    "myaccount": "Mein Account",
+    "viewbsc": "Auf BSCScan schauen",
+    "balance": "Ihr WELB vorrat"
+  },
+  "disclaimermodal": {
+    "modalcontent": {
+      "titel": "Ankündigung",
+      "p1": "Mit großer Freude möchten wir Sie zum Launch von Welb einladen!",
+      "p2": "Welb wird die Heimat unseres neuen Frontends und bietet eine Schnittstelle für alle Interaktionen mit dem WelbSwap-Protokoll.",
+      "p3": "Die Entwicklung wird weitergehen und WelbSwap wird in der Zwischenzeit weiterhin bestehen, während wir daran arbeiten, Welb vollständig aufpolieren zu lassen."
+    },
+    "btnnext": "Weiter",
+    "btnaccess": "Klicke hier, um auf Welb zuzugreifen",
+    "btncontinue": "Weiter zu Classic"
+  }
+}

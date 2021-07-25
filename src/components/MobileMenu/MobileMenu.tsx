@@ -33,6 +33,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onDismiss, visible }) => {
           >
             Staking
           </StyledLink>
+          <select />
         </StyledMobileMenu>
       </StyledMobileMenuWrapper>
     )

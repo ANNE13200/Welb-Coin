@@ -1,0 +1,122 @@
+{
+  "lang": {
+    "de": "German",
+    "en": "English"
+  },
+  "linkname": {
+    "home": "Home",
+    "farm": "Farm",
+    "staking": "Staking",
+    "exchange": "Exchange",
+    "contact": "Contact"
+  },
+  "home": {
+    "ready": "WELLBE COIN is Ready For You..!!",
+    "stake": "Stake WELB-Swap LP tokens to claim your very own WELB!",
+    "pro-tip": "\uD83C\uDFC6<strong>Pro Tip</strong>: WELB-BNB SLP token pool yields <i>0.5x</i> more token rewards per block.",
+    "btnfarm": "\uD83D\uDD2A  See the Farm"
+  },
+  "staking": {
+    "title": "Stake Now",
+    "subtitle": "Welcome to the Welb Bar, stake Welb to earn Welb.",
+    "balance": {
+      "xwelb": "xWELB (WelbBar) Available",
+      "welb": "WELB Tokens Available"
+    },
+    "btn": {
+      "covert-to-welb": "Convert to WELB",
+      "covert-to-welb-progress": "Converting to WELB",
+      "convert-to-xwelb": "Convert to xWELB"
+    },
+    "info":{
+      "p1": "ℹ️You will earn a portion of the swaps fees based on the amount by staking Welb.",
+      "p2": "of xWelb held relative the weight of the staking. xWelb can be minted",
+      "p3": "by staking Welb. To redeem Welb staked plus swap fees convert xWelb back to Welb.",
+      "total-staked": "There are currently <strong>{{_totalSupply}} xWELB</strong> in the whole pool."
+    },
+    "modal": {
+      "withdraw": {
+        "title": "Withdraw {{token}}",
+        "available": "Available"
+      },
+      "desposit": {
+        "title": "Deposit {{token}} Tokens",
+        "available": "Available"
+      },
+      "btn": {
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "pending": "Pending Confirm"
+      }
+    }
+  },
+  "farms": {
+    "title": "Select Your Favorite Dishes",
+    "subtitle": {
+      "p1": "Earn WELB tokens by staking WelbSwap V2 SLP Tokens.",
+      "p2": "Note: Current APY includes 2/3rd WELB emission",
+      "p3": "that is locked and will be retroactively",
+      "p4": " disbursed at a later date."
+    },
+    "deposit": "Deposit",
+    "earn": "earn",
+    "select": "Select",
+    "disabled": "UPCOMING",
+    "apy-text": "Loading ...",
+    "farm-selected": {
+      "subtitle": "Deposit {{_lpTokenName}} LP-Tokens and earn {{_earnTokenName}}",
+      "info": "⭐️Every time you stake and unstake LP tokens, the contract will automagically harvest WELB rewards for you!",
+      "earned": "{{_lpTokenName}} earned",
+      "lp-stake": "{{_tokenName}} LP-Token Staked",
+      "lp-unstake": "Unstake",
+      "modal": {
+        "withdraw": {
+          "title": "Withdraw {{_tokenName}} LP-Token"
+        },
+        "desposit": {
+          "title": "Deposit {{_tokenName}} LP-Tokens"
+        },
+        "btn": {
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "pending": "Pending Confirm"
+        }
+      },
+      "harvest": {
+        "title": "{{_tokenName}} earned",
+        "harvest": "Harvest",
+        "collect": "Collecting {{_tokenName}}"
+      }
+    }
+  },
+  "balances": {
+    "yourwelb": "Your WELB Balance",
+    "totalwelb": "Total WELB Supply",
+    "account": "Locked",
+    "harvest": "Pending harvest",
+    "reward": "New rewards per block"
+  },
+  "wallet": {
+    "unlock": "Unlock Wallet",
+    "unlock-icon": "\uD83D\uDD13 Unlock Wallet",
+    "lock": "Sign out",
+    "mywallet": "My Wallet",
+    "provider": "Select a wallet provider",
+    "btncancel": "Cancel",
+    "btnconnect": "Connect",
+    "myaccount": "My Account",
+    "viewbsc": "View on BSCScan",
+    "balance": "WELB Balance"
+  },
+  "disclaimermodal": {
+    "modalcontent": {
+      "titel": "Announcement",
+      "p1": "With great pleasure we would like to invite you the launch of Welb!",
+      "p2": "Welb will be the home of our new frontend, and provides an interface for all interactions with the WelbSwap protocol.",
+      "p3": "Development will be on going, and welbswap will still exist in the interim as we work to get Welb completely polished."
+    },
+    "btnnext": "Next",
+    "btnaccess": "Click here to access Welb",
+    "btncontinue": "Continue To Classic"
+  }
+}

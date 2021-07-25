@@ -7,6 +7,7 @@ import Modal, { ModalProps } from '..//Modal'
 import ModalActions from '..//ModalActions'
 import ModalContent from '../ModalContent'
 import ModalTitle from '../ModalTitle'
+import { useTranslation, Trans } from "react-i18next";
 
 interface DisclaimerModal extends ModalProps {
   onConfirm: () => void
@@ -32,27 +33,22 @@ const DisclaimerModal: React.FC<DisclaimerModal> = ({
     onDismiss()
   }, [onConfirm, onDismiss])
 
+    const { t } = useTranslation();
+
   const modalContent = useMemo(() => {
     if (step === 'disclaimer') {
       return (
-        <div>
-          <p> With great pleasure we would like to invite you the launch
-              of Welb!
-          </p>
-          <p> Welb will be the home of our new frontend, and provides
-              an interface for all interactions with the WelbSwap protocol.
-          </p>
-          <p> Development will be on going, and welbswap will still
-              exist in the interim as we work to get Welb completely
-              polished.
-          </p>
+        <div className={"modal"}>
+          <p>{ t("disclaimermodal.modalcontent.p1") }</p>
+          <p> { t("disclaimermodal.modalcontent.p2") }</p>
+          <p>{ t("disclaimermodal.modalcontent.p3") }</p>
         </div>
       )
     } else {
       return (
-        <div>
+        <div className={"center"}>
           <StyledLink target="_blank" href="https://app.defhold.com">
-            Click here to access Welb.
+              { t("disclaimermodal.btnaccess") }
           </StyledLink>
         </div>
       )
@@ -63,19 +59,19 @@ const DisclaimerModal: React.FC<DisclaimerModal> = ({
     if (step === 'disclaimer') {
       return (
         <Button
-          text="Next"
+          text={ t("disclaimermodal.btnnext") }
           variant="secondary"
           onClick={() => setStep('uniswap')}
         />
       )
     } else {
-      return <Button text="Continue To Classic" onClick={handleConfirm} />
+      return <Button text={ t("disclaimermodal.btncontinue") } onClick={handleConfirm} />
     }
   }, [setStep, step, handleConfirm])
 
   return (
     <Modal>
-      <ModalTitle text={`Announcement`} />
+      <ModalTitle text={t("disclaimermodal.modalcontent.titel")} />
       <ModalContent>{modalContent}</ModalContent>
       <ModalActions>{button}</ModalActions>
     </Modal>

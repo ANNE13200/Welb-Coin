@@ -16,6 +16,7 @@ import useEnter from "../../../hooks/useEnter";
 import useLeave from "../../../hooks/useLeave";
 import useAllowanceStaking from "../../../hooks/useAllowanceStaking";
 import useApproveStaking from "../../../hooks/useApproveStaking";
+import { useTranslation } from "react-i18next";
 
 interface StakeProps {
 }
@@ -32,6 +33,7 @@ const StakeWelb: React.FC<StakeProps> = ({}) => {
   const {onEnter} = useEnter()
   const {onLeave} = useLeave()
 
+  const { t } = useTranslation();
   const [onPresentDeposit] = useModal(
     <DepositModal
       max={tokenBalance}
@@ -60,7 +62,7 @@ const StakeWelb: React.FC<StakeProps> = ({}) => {
           <StyledCardHeader>
             <CardIcon>👨🏻‍🍳</CardIcon>
             <Value value={getBalanceNumber(tokenBalance)}/>
-            <Label text={`WELB Tokens Available`}/>
+            <Label text={t("staking.balance.welb")}/>
           </StyledCardHeader>
           <StyledCardActions>
             {!allowance.toNumber() ? (
@@ -73,7 +75,7 @@ const StakeWelb: React.FC<StakeProps> = ({}) => {
               <>
                 <Button
                   disabled={tokenBalance.eq(new BigNumber(0))}
-                  text="Convert to xWELB"
+                  text={t("staking.btn.convert-to-xwelb")}
                   onClick={onPresentDeposit}
                 />
                 <StyledActionSpacer/>

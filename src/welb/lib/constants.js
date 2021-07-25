@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js/bignumber'
+import { useTranslation } from "react-i18next";
 
 export const SUBTRACT_GAS_LIMIT = 100000
 
@@ -6,6 +7,8 @@ const ONE_MINUTE_IN_SECONDS = new BigNumber(60)
 const ONE_HOUR_IN_SECONDS = ONE_MINUTE_IN_SECONDS.times(60)
 const ONE_DAY_IN_SECONDS = ONE_HOUR_IN_SECONDS.times(24)
 const ONE_YEAR_IN_SECONDS = ONE_DAY_IN_SECONDS.times(365)
+
+
 
 export const INTEGERS = {
   ONE_MINUTE_IN_SECONDS,
@@ -40,10 +43,11 @@ export const contractAddresses = {
 }
 
 
-
 export const supportedPools = [
+
   {
     pid: 0,
+
     lpAddresses: {
       56: '0x69eee8735f97144dbd2ce66a63ff999dca60e2d7',
     },
@@ -51,15 +55,14 @@ export const supportedPools = [
       56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
     name: 'WELB BOXE!',
+    active: true,
     symbol: 'WELB-WBNB',
     tokenSymbol: 'WELB',
     icon: '🥊',
   },
   {
- 
-  
-    {
     pid: 1,
+    active: true,
     lpAddresses: {
       56: '0x6ef26bbf79bc7db23d05ccc3f6d737dbd8958f8e',
     },
@@ -71,8 +74,9 @@ export const supportedPools = [
     tokenSymbol: 'WELB',
     icon: '🤸‍♀️',
   },
-    
-       pid: 2,
+  {
+    pid: 2,
+    active: false,
     lpAddresses: {
       56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
     },
@@ -80,13 +84,14 @@ export const supportedPools = [
       56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
     name: 'WELB YOGA!',
-    symbol: 'WELB-WBTCB - UPCOMING',
+    symbol: 'WELB-WBTCB',
     tokenSymbol: 'WELB',
     icon: '🧘',
   },
   
    {
     pid: 3,
+    active: false,
     lpAddresses: {
       56: '0xfbb612f993b5270849fb817b4a89e140dc0480f6',
     },
@@ -94,9 +99,9 @@ export const supportedPools = [
       56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
     name: 'WELB GYM!',
-    symbol: 'WELB-USDT - UPCOMING',
+    symbol: 'WELB-USDT',
     tokenSymbol: 'WELB',
-    icon: '🚴‍♂️',
+    icon: '🚴‍♂',
   },
  
 ]

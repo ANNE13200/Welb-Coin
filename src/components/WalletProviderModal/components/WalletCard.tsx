@@ -10,15 +10,17 @@ interface WalletCardProps {
   icon: React.ReactNode
   onConnect: () => void
   title: string
+  translationtext?: string
 }
 
-const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title }) => (
+const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title,translationtext }) => (
+
   <Card>
     <CardContent>
       <CardIcon>{icon}</CardIcon>
       <CardTitle text={title} />
       <Spacer />
-      <Button onClick={onConnect} text="Connect" />
+      <Button onClick={onConnect} text={translationtext ? translationtext : "Connect"} />
     </CardContent>
   </Card>
 )

@@ -16,6 +16,7 @@ import useTokenBalance from '../../../hooks/useTokenBalance'
 import useWelb from '../../../hooks/useWelb'
 import { getWelbAddress, getWelbSupply } from '../../../welb/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+import { useTranslation, Trans } from "react-i18next"
 
 const PendingRewards: React.FC = () => {
   const [start, setStart] = useState(0)
@@ -74,6 +75,10 @@ const Balances: React.FC = () => {
   const welb = useWelb()
   const welbBalance = useTokenBalance(getWelbAddress(welb))
   const { account, ethereum }: { account: any; ethereum: any } = useWallet()
+  const  { t } = useTranslation();
+
+  let _account;
+  let _totalSupply;
 
   useEffect(() => {
     async function fetchTotalSupply() {
@@ -85,6 +90,18 @@ const Balances: React.FC = () => {
     }
   }, [welb, setTotalSupply])
 
+  if(account){
+    _account = getBalanceNumber(welbBalance);
+  }else{
+    _account = t("balances.account");
+  }
+
+  if(totalSupply){
+    _totalSupply = getBalanceNumber(totalSupply);
+  }else{
+    _totalSupply = t("balances.account");
+  }
+
   return (
     <StyledWrapper>
       <Card>
@@ -94,16 +111,16 @@ const Balances: React.FC = () => {
               <WelbIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
-                <Label text="Your WELB Balance" />
+                <Label text={t("balances.yourwelb")} />
                 <Value
-                  value={!!account ? getBalanceNumber(welbBalance) : 'Locked'}
+                  value={ _account }
                 />
               </div>
             </StyledBalance>
           </StyledBalances>
         </CardContent>
         <Footnote>
-          Pending harvest
+          {t("balances.harvest")}
           <FootnoteValue>
             <PendingRewards /> WELB
           </FootnoteValue>
@@ -113,13 +130,13 @@ const Balances: React.FC = () => {
 
       <Card>
         <CardContent>
-          <Label text="Total WELB Supply" />
+          <Label text={t("balances.totalwelb")} />
           <Value
-            value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
+            value={ _totalSupply }
           />
         </CardContent>
         <Footnote>
-          New rewards per block
+          {t("balances.reward")}
           <FootnoteValue>100 WELB</FootnoteValue>
         </Footnote>
       </Card>

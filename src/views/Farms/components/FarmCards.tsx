@@ -17,6 +17,7 @@ import useFarms from '../../../hooks/useFarms'
 import useWelb from '../../../hooks/useWelb'
 import { getEarned, getMasterChefContract } from '../../../welb/utils'
 import { bnToDec } from '../../../utils'
+import { useTranslation } from "react-i18next";
 
 interface FarmWithStakedValue extends Farm, StakedValue {
   apy: BigNumber
@@ -43,9 +44,8 @@ const FarmCards: React.FC = () => {
     console.log(stakedValue[0].poolWeight.toString())
     console.log(stakedValue[0].totalWethValue.toString())
   }
-
   const rows = farms.reduce<FarmWithStakedValue[][]>(
-    (farmRows, farm, i) => {
+  (farmRows, farm, i) => {
       const farmWithStakedValue = {
         ...farm,
         ...stakedValue[i],
@@ -68,7 +68,6 @@ const FarmCards: React.FC = () => {
     },
     [[]],
   )
-
   return (
     <StyledCards>
       {!!rows[0].length ? (
@@ -131,6 +130,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   }, [welb, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
+  const { t } = useTranslation()
 
   return (
     <StyledCardWrapper>
@@ -141,13 +141,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <CardIcon>{farm.icon}</CardIcon>
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>
-              <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
-              <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
+              <StyledDetail>{ t("farms.deposit") } {farm.lpToken}</StyledDetail>
+              <StyledDetail>{ t("farms.earn") } {farm.earnToken.toUpperCase()}</StyledDetail>
             </StyledDetails>
             <Spacer />
             <Button
-              disabled={!poolActive}
-              text={poolActive ? 'Select' : undefined}
+              disabled={!farm.active}
+              text={farm.active ? t("farms.select") : t("farms.disabled")}
               to={`/farms/${farm.id}`}
             >
               {!poolActive && (
@@ -166,7 +166,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                       .toNumber()
                       .toLocaleString('en-US')
                       .slice(0, -1)}%`
-                  : 'Loading ...'}
+                  : t("farms.apy-text")}
               </span>
               {/* <span>
                 {farm.tokenAmount

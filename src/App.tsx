@@ -15,7 +15,11 @@ import Farms from './views/Farms'
 import Home from './views/Home'
 import Staking from "./views/Staking";
 
+
+
+
 const App: React.FC = () => {
+
   const [mobileMenu, setMobileMenu] = useState(false)
 
   const handleDismissMobileMenu = useCallback(() => {
@@ -29,7 +33,7 @@ const App: React.FC = () => {
   return (
     <Providers>
       <Router>
-        <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
+        <TopBar onPresentMobileMenu={handlePresentMobileMenu}  />
         <MobileMenu onDismiss={handleDismissMobileMenu} visible={mobileMenu} />
         <Switch>
           <Route path="/" exact>

@@ -14,11 +14,14 @@ import useModal from '../../hooks/useModal'
 import Farm from '../Farm'
 
 import FarmCards from './components/FarmCards'
+import { useTranslation } from "react-i18next";
+import Spacer from "../../components/Spacer";
 
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
   const { account } = useWallet()
   const [onPresentWalletProviderModal] = useModal(<WalletProviderModal />)
+  const { t } = useTranslation()
   return (
     <Switch>
       <Page>
@@ -31,8 +34,16 @@ const Farms: React.FC = () => {
                 subtitle=""
                 title=""
               />
-               <h1 style={{"textAlign":"center","color":"#fff"}}>Select Your Favorite Dishes</h1>
-               <p style={{"textAlign":"center","color":"#fff"}}>Earn WELB tokens by staking WelbSwap V2 SLP Tokens. <br /> Note: Current APY includes 2/3rd WELB emission <br /> that is locked and will be retroactively <br /> disbursed at a later date.</p>
+               <h1 style={{"textAlign":"center","color":"#fff"}}> { t("farms.title") }</h1>
+               <p style={{"textAlign":"center","color":"#fff"}}>
+                   { t("farms.subtitle.p1") } <br />
+               </p>
+                <p style={{"textAlign":"center","color":"#fff"}}>
+                    { t("farms.subtitle.p2") } <br />
+                    { t("farms.subtitle.p3") } <br />
+                    { t("farms.subtitle.p4") }
+                </p>
+                <Spacer/>
               <FarmCards />
             </Route>
             <Route path={`${path}/:farmId`}>
@@ -50,7 +61,7 @@ const Farms: React.FC = () => {
           >
             <Button
               onClick={onPresentWalletProviderModal}
-              text="🔓 Unlock Wallet"
+              text={t("wallet.unlock-icon")}
             />
           </div>
         )}

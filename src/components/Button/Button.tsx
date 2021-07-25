@@ -11,7 +11,8 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   to?: string,
-  variant?: 'default' | 'secondary' | 'tertiary'
+  variant?: 'default' | 'secondary' | 'tertiary',
+  className?: string
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -119,6 +120,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: 100%;
   &:hover {
     background-color: ${props => props.theme.color.grey[100]};
+    color: #000;
   }
 `
 

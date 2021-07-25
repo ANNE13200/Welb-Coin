@@ -6,12 +6,20 @@ import Logo from '../Logo'
 
 import AccountButton from './components/AccountButton'
 import Nav from './components/Nav'
+import Select from "../Select";
+
+
+
+
+
 
 interface TopBarProps {
   onPresentMobileMenu: () => void
 }
 
 const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
+
+
   return (
     <StyledTopBar>
       <Container size="lg">
@@ -59,7 +67,7 @@ const StyledAccountButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  width: 156px;
+  width: auto;
   @media (max-width: 400px) {
     justify-content: center;
     width: auto;

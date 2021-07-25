@@ -13,10 +13,11 @@ import ModalTitle from '../ModalTitle'
 import Spacer from '../Spacer'
 
 import WalletCard from './components/WalletCard'
+import { useTranslation } from "react-i18next";
 
 const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const { account, connect } = useWallet()
-
+  const { t } = useTranslation();
   useEffect(() => {
     if (account) {
       onDismiss()
@@ -25,7 +26,7 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
   return (
     <Modal>
-      <ModalTitle text="Select a wallet provider." />
+      <ModalTitle text={t("wallet.provider")} />
 
       <ModalContent>
         <StyledWalletsWrapper>
@@ -34,6 +35,7 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
               icon={<img src={metamaskLogo} style={{ height: 32 }} />}
               onConnect={() => connect('injected')}
               title="Metamask"
+              translationtext={t("wallet.btnconnect")}
             />
           </StyledWalletCard>
           <Spacer size="sm" />
@@ -42,13 +44,14 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
               icon={<img src={walletConnectLogo} style={{ height: 24 }} />}
               onConnect={() => connect('walletconnect')}
               title="WalletConnect"
+              translationtext={t("wallet.btnconnect")}
             />
           </StyledWalletCard>
         </StyledWalletsWrapper>
       </ModalContent>
 
       <ModalActions>
-        <Button text="Cancel" variant="secondary" onClick={onDismiss} />
+        <Button text={t("wallet.btncancel")} variant="secondary" onClick={onDismiss} />
       </ModalActions>
     </Modal>
   )

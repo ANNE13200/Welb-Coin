@@ -13,7 +13,7 @@ import {Contract} from "web3-eth-contract";
 import useModal from "../../../hooks/useModal";
 import WithdrawModal from "./WithdrawModal";
 import useLeave from "../../../hooks/useLeave";
-
+import { useTranslation } from "react-i18next";
 interface HarvestProps {
   lpContract: Contract
 }
@@ -35,6 +35,7 @@ const UnstakeXWelb: React.FC<HarvestProps> = ({lpContract}) => {
     />,
   )
 
+  const { t } = useTranslation();
   return (
     <Card>
       <CardContent>
@@ -42,12 +43,12 @@ const UnstakeXWelb: React.FC<HarvestProps> = ({lpContract}) => {
           <StyledCardHeader>
             <CardIcon>🏆</CardIcon>
             <Value value={getBalanceNumber(xWelbBalance)}/>
-            <Label text="xWELB (WelbBar) Available"/>
+            <Label text={t("staking.balance.xwelb")}/>
           </StyledCardHeader>
           <StyledCardActions>
             <Button
               disabled={!xWelbBalance.toNumber() || pendingTx}
-              text={pendingTx ? 'Converting to WELB' : 'Convert to WELB'}
+              text={pendingTx ? t("staking.btn.covert-to-welb-progess") : t("staking.btn.covert-to-welb")}
               onClick={async () => {
                 setPendingTx(true)
                 await onPresentLeave()

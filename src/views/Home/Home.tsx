@@ -7,8 +7,10 @@ import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import Spacer from '../../components/Spacer'
 import Balances from './components/Balances'
+import { useTranslation, Trans } from "react-i18next";
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Page>
       <PageHeader
@@ -16,16 +18,19 @@ const Home: React.FC = () => {
         title=""
         subtitle=""
       />
-      <h1 style={{"color":"#fff"}}>WELLBE COIN is Ready For You..!!</h1>
-      <h2 style={{"color":"#fff"}}>Stake WELB-Swap LP tokens to claim your very own WELB!</h2>
+      <h1 style={{"color":"#fff"}}>{t("home.ready")}</h1>
+      <h2 style={{"color":"#fff"}}>{t("home.stake")}</h2>
 
       <Container>
         <Balances />
       </Container>
       <Spacer size="lg" />
       <StyledInfo>
-        🏆<b>Pro Tip</b>: WELB-BNB SLP token pool yields 0.5x more token
-        rewards per block.
+          <Trans i18nKey="home.pro-tip">
+              🏆<strong>Pro Tip</strong>: WELB-BNB SLP token pool yields <u>0.5x more</u> token rewards per block.
+          </Trans>
+
+
       </StyledInfo>
       <Spacer size="lg" />
       <div
@@ -33,7 +38,7 @@ const Home: React.FC = () => {
           margin: '0 auto',
         }}
       >
-        <Button text="🔪 See the Farm" to="/farms" variant="secondary" />
+        <Button text={t("home.btnfarm")} to="/farms" variant="secondary" />
       </div>
     </Page>
   )
