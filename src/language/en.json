@@ -3,11 +3,52 @@
     "de": "German",
     "en": "English"
   },
+  "linkname": {
+    "home": "Home",
+    "farm": "Farm",
+    "staking": "Staking",
+    "exchange": "Exchange",
+    "contact": "Contact"
+  },
   "home": {
     "ready": "WELLBE COIN is Ready For You..!!",
     "stake": "Stake WELB-Swap LP tokens to claim your very own WELB!",
     "pro-tip": "\uD83C\uDFC6<strong>Pro Tip</strong>: WELB-BNB SLP token pool yields <i>0.5x</i> more token rewards per block.",
     "btnfarm": "\uD83D\uDD2A  See the Farm"
+  },
+  "staking": {
+    "title": "Stake Now",
+    "subtitle": "Welcome to the Welb Bar, stake Welb to earn Welb.",
+    "balance": {
+      "xwelb": "xWELB (WelbBar) Available",
+      "welb": "WELB Tokens Available"
+    },
+    "btn": {
+      "covert-to-welb": "Convert to WELB",
+      "covert-to-welb-progress": "Converting to WELB",
+      "convert-to-xwelb": "Convert to xWELB"
+    },
+    "info":{
+      "p1": "ℹ️You will earn a portion of the swaps fees based on the amount by staking Welb.",
+      "p2": "of xWelb held relative the weight of the staking. xWelb can be minted",
+      "p3": "by staking Welb. To redeem Welb staked plus swap fees convert xWelb back to Welb.",
+      "total-staked": "There are currently <strong>{{_totalSupply}} xWELB</strong> in the whole pool."
+    },
+    "modal": {
+      "withdraw": {
+        "title": "Withdraw {{token}}",
+        "available": "Available"
+      },
+      "desposit": {
+        "title": "Deposit {{token}} Tokens",
+        "available": "Available"
+      },
+      "btn": {
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "pending": "Pending Confirm"
+      }
+    }
   },
   "balances": {
     "yourwelb": "Your WELB Balance",
@@ -18,6 +59,7 @@
   },
   "wallet": {
     "unlock": "Unlock Wallet",
+    "unlock-icon": "\uD83D\uDD13 Unlock Wallet",
     "lock": "Sign out",
     "mywallet": "My Wallet",
     "provider": "Select a wallet provider",

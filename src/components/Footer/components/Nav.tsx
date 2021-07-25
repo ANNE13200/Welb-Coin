@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Select from '../../Select'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
@@ -28,6 +28,7 @@ const Nav: React.FC = () => {
       <StyledLink target="_blank" href="https://cyclon13200.medium.com/">
         Medium
       </StyledLink>
+      <Select />
     </StyledNav>
   )
 }

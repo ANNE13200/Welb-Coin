@@ -3,11 +3,52 @@
     "de": "Deutsch",
     "en": "Englisch"
   },
+  "linkname": {
+    "home": "Home",
+    "farm": "Farms",
+    "staking": "Pool",
+    "exchange": "Börse",
+    "contact": "Kontakt"
+  },
   "home": {
     "ready": "WELLBE COIN ist bereit für dich..!!",
     "stake": "Setzen Sie WELB-Swap-LP-Token ein, um Ihr eigenes WELB zu beanspruchen!",
     "pro-tip": "\uD83C\uDFC6<strong>Unsere Empfehlung</strong>: WELB-BNB SLP Token Pool bringt <i>0,5x</i> mehr Token-Belohnungen pro Block.",
     "btnfarm": "\uD83D\uDD2A Auf zur Farm"
+  },
+  "staking": {
+    "title": "WELB Pool",
+    "subtitle": "Willkommen in der WelbBar, fügen Sie xWELB zum Pool hinzu und verdienen Sie WELB.",
+    "balance": {
+      "xwelb": "xWELB (WelbBar) Verfügbar",
+      "welb": "WELB Token Verfügbar"
+    },
+    "btn": {
+      "covert-to-welb": "In WELB Umwandeln",
+      "covert-to-welb-progress": "Umstellung auf WELB",
+      "convert-to-xwelb": "In xWELB Umwandeln"
+    },
+    "info":{
+      "p1": "ℹ️Sie erhalten einen Teil der Swap-Gebühren basierend auf der Menge an xWELB, ",
+      "p2": "die im Verhältnis zum Gewicht des Einsatzes gehalten wird. xWELB kann durch Staken ",
+      "p3": "von WELB geprägt werden. Um WELB-Stakes plus Swap-Gebühren einzulösen, konvertieren Sie xWELB zurück in WELB.",
+      "total-staked": "Es befinden sich aktuell <strong>{{_totalSupply}} xWELB</strong> im gesamten Pool."
+    },
+    "modal": {
+      "withdraw": {
+        "title": "{{token}} Token Abheben",
+        "available": "Verfügbar"
+      },
+      "desposit": {
+        "title": "{{token}} Token Einzahlen",
+        "available": "Verfügbar"
+      },
+      "btn": {
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "pending": "Ausstehende Bestätigung"
+      }
+    }
   },
   "balances": {
     "yourwelb": "Dein WELB Guthaben",
@@ -18,6 +59,7 @@
   },
   "wallet": {
     "unlock": "Wallet Verbinden",
+    "unlock-icon": "\uD83D\uDD13 Wallet Verbinden",
     "lock": "Abmelden",
     "mywallet": "Mein Wallet",
     "provider": "Wähle einen Wallet Provider",

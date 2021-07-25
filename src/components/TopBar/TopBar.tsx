@@ -28,7 +28,6 @@ const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
             <Logo />
           </StyledLogoWrapper>
           <Nav />
-          <Select/>
           <StyledAccountButtonWrapper>
             <AccountButton />
           </StyledAccountButtonWrapper>
@@ -68,7 +67,7 @@ const StyledAccountButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  width: 156px;
+  width: auto;
   @media (max-width: 400px) {
     justify-content: center;
     width: auto;

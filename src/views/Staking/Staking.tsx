@@ -12,10 +12,13 @@ import WalletProviderModal from '../../components/WalletProviderModal'
 import useModal from '../../hooks/useModal'
 import StakeXWelb from "../StakeXWelb";
 
+import { useTranslation } from "react-i18next";
+
 const Staking: React.FC = () => {
   const {path} = useRouteMatch()
   const {account} = useWallet()
   const [onPresentWalletProviderModal] = useModal(<WalletProviderModal/>)
+  const { t } = useTranslation();
   return (
     <Switch>
       <Page>
@@ -28,8 +31,8 @@ const Staking: React.FC = () => {
                 
               />
               
-              <h1 style={{"textAlign":"center","color":"#fff"}}>Stake Now</h1>
-              <h2 style={{"textAlign":"center","color":"#fff"}}>Welcome to the Welb Bar, stake Welb to earn Welb.</h2>
+              <h1 style={{"textAlign":"center","color":"#fff"}}>{ t("staking.title") }</h1>
+              <h2 style={{"textAlign":"center","color":"#fff"}}>{ t("staking.subtitle") }</h2>
             </Route>
             <StakeXWelb/>
           </>
@@ -44,7 +47,7 @@ const Staking: React.FC = () => {
           >
             <Button
               onClick={onPresentWalletProviderModal}
-              text="🔓 Unlock Wallet"
+              text={t("wallet.unlock-icon")}
             />
           </div>
         )}

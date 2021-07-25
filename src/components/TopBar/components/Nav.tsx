@@ -1,31 +1,33 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import { useTranslation } from "react-i18next";
 
 const Nav: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <StyledNav>
       <StyledLink exact activeClassName="active" to="/">
-        Home
+          { t("linkname.home") }
       </StyledLink>
       <StyledLink exact activeClassName="active" to="/farms">
-        Farm
+          { t("linkname.farm") }
       </StyledLink>
       <StyledLink exact activeClassName="active" to="/staking">
-        Staking
+          { t("linkname.staking") }
       </StyledLink>
       <StyledAbsoluteLink
-        href="https://exchange.pancakeswap.com/#/swap"
+        href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x6af2a7ca07dc6e234a1e3fc4450b343ff994b1e6"
         target="_blank"
       >
-        Exchange
+          { t("linkname.exchange") }
       </StyledAbsoluteLink>
       
       <StyledAbsoluteLink
         href="https://www.wellbe-coin.com/t-en-gb/contact"
         target="_blank"
       >
-        Contact
+          { t("linkname.contact") }
       </StyledAbsoluteLink>
       
     </StyledNav>

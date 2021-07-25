@@ -4,10 +4,12 @@ import styled from 'styled-components'
 import Button from '../Button'
 import Input, { InputProps } from '../Input'
 
+
 interface TokenInputProps extends InputProps {
   max: number | string,
   symbol: string,
   onSelectMax?: () => void,
+  text?: string
 }
 
 const TokenInput: React.FC<TokenInputProps> = ({
@@ -16,10 +18,11 @@ const TokenInput: React.FC<TokenInputProps> = ({
   onChange,
   onSelectMax,
   value,
+  text
 }) => {
   return (
     <StyledTokenInput>
-      <StyledMaxText>{max.toLocaleString()} {symbol} Available</StyledMaxText>
+      <StyledMaxText>{max.toLocaleString()} {symbol} {text}</StyledMaxText>
       <Input
         endAdornment={(
           <StyledTokenAdornmentWrapper>

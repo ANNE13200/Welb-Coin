@@ -12,7 +12,6 @@ class Select extends React.Component {
         // No longer need to cast to any - hooray for react!
         let safeLang: string = event.currentTarget.value;
         i18next.changeLanguage(safeLang);
-        console.log(safeLang); // in chrome => B
 
         this.setState({
             value: safeLang

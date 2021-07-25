@@ -6,6 +6,7 @@ import ModalActions from '../../../components/ModalActions'
 import ModalTitle from '../../../components/ModalTitle'
 import TokenInput from '../../../components/TokenInput'
 import { getFullDisplayBalance } from '../../../utils/formatBalance'
+import { useTranslation } from "react-i18next";
 
 interface WithdrawModalProps extends ModalProps {
   max: BigNumber
@@ -37,21 +38,24 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({
     setVal(fullBalance)
   }, [fullBalance, setVal])
 
+  const { t } = useTranslation()
+
   return (
     <Modal>
-      <ModalTitle text={`Withdraw ${tokenName}`} />
+      <ModalTitle text={t("staking.modal.withdraw.title",{ token: tokenName}) } />
       <TokenInput
         onSelectMax={handleSelectMax}
         onChange={handleChange}
         value={val}
         max={fullBalance}
         symbol={tokenName}
+        text={t("staking.modal.withdraw.available")}
       />
       <ModalActions>
-        <Button text="Cancel" variant="secondary" onClick={onDismiss} />
+        <Button text={t("staking.modal.btn.cancel")} variant="secondary" onClick={onDismiss} />
         <Button
           disabled={pendingTx}
-          text={pendingTx ? 'Pending Confirmation' : 'Confirm'}
+          text={pendingTx ? t("staking.modal.btn.pending") : t("staking.modal.btn.confirm")}
           onClick={async () => {
             setPendingTx(true)
             await onConfirm(val)
