@@ -44,9 +44,8 @@ const FarmCards: React.FC = () => {
     console.log(stakedValue[0].poolWeight.toString())
     console.log(stakedValue[0].totalWethValue.toString())
   }
-
   const rows = farms.reduce<FarmWithStakedValue[][]>(
-    (farmRows, farm, i) => {
+  (farmRows, farm, i) => {
       const farmWithStakedValue = {
         ...farm,
         ...stakedValue[i],
@@ -69,7 +68,6 @@ const FarmCards: React.FC = () => {
     },
     [[]],
   )
-
   return (
     <StyledCards>
       {!!rows[0].length ? (
@@ -133,6 +131,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
   const { t } = useTranslation()
+
   return (
     <StyledCardWrapper>
       {farm.tokenSymbol === 'WELB' && <StyledCardAccent />}
@@ -147,8 +146,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             </StyledDetails>
             <Spacer />
             <Button
-              disabled={!poolActive}
-              text={poolActive ? t("farms.select") : undefined}
+              disabled={!farm.active}
+              text={farm.active ? t("farms.select") : t("farms.disabled")}
               to={`/farms/${farm.id}`}
             >
               {!poolActive && (

@@ -61,6 +61,7 @@
     "deposit": "Deposit",
     "earn": "earn",
     "select": "Select",
+    "disabled": "UPCOMING",
     "apy-text": "Loading ...",
     "farm-selected": {
       "subtitle": "Deposit {{_lpTokenName}} LP-Tokens and earn {{_earnTokenName}}",

@@ -18,6 +18,7 @@ const Farm: React.FC = () => {
   const { farmId } = useParams()
   const {
     pid,
+    active,
     lpToken,
     lpTokenAddress,
     tokenAddress,
@@ -26,6 +27,7 @@ const Farm: React.FC = () => {
     icon,
   } = useFarm(farmId) || {
     pid: 0,
+    active: false,
     lpToken: '',
     lpTokenAddress: '',
     tokenAddress: '',
@@ -50,6 +52,7 @@ const Farm: React.FC = () => {
   const lpTokenName = useMemo(() => {
     return lpToken
   }, [lpToken])
+
 
   const earnTokenName = useMemo(() => {
     return earnToken.toUpperCase()

@@ -61,6 +61,7 @@
     "deposit": "Stake",
     "earn": "verdiene",
     "select": "Auswählen",
+    "disabled": "Bald verfügbar",
     "apy-text": "Laden ...",
     "farm-selected": {
       "subtitle": "Setzen Sie {{_lpTokenName}} LP-Token und verdiene {{_earnTokenName}}",

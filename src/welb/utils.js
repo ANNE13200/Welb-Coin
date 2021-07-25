@@ -39,6 +39,7 @@ export const getFarms = (welb) => {
     ? welb.contracts.pools.map(
         ({
           pid,
+          active,
           name,
           symbol,
           icon,
@@ -49,6 +50,7 @@ export const getFarms = (welb) => {
           lpContract,
         }) => ({
           pid,
+          active,
           id: symbol,
           name,
           lpToken: symbol,
