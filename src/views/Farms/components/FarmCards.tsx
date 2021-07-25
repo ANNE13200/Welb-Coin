@@ -17,6 +17,7 @@ import useFarms from '../../../hooks/useFarms'
 import useWelb from '../../../hooks/useWelb'
 import { getEarned, getMasterChefContract } from '../../../welb/utils'
 import { bnToDec } from '../../../utils'
+import { useTranslation } from "react-i18next";
 
 interface FarmWithStakedValue extends Farm, StakedValue {
   apy: BigNumber
@@ -131,7 +132,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   }, [welb, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
-
+  const { t } = useTranslation()
   return (
     <StyledCardWrapper>
       {farm.tokenSymbol === 'WELB' && <StyledCardAccent />}
@@ -141,13 +142,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <CardIcon>{farm.icon}</CardIcon>
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>
-              <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
-              <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
+              <StyledDetail>{ t("farms.deposit") } {farm.lpToken}</StyledDetail>
+              <StyledDetail>{ t("farms.earn") } {farm.earnToken.toUpperCase()}</StyledDetail>
             </StyledDetails>
             <Spacer />
             <Button
               disabled={!poolActive}
-              text={poolActive ? 'Select' : undefined}
+              text={poolActive ? t("farms.select") : undefined}
               to={`/farms/${farm.id}`}
             >
               {!poolActive && (
@@ -166,7 +167,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                       .toNumber()
                       .toLocaleString('en-US')
                       .slice(0, -1)}%`
-                  : 'Loading ...'}
+                  : t("farms.apy-text")}
               </span>
               {/* <span>
                 {farm.tokenAmount

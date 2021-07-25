@@ -9,6 +9,7 @@ import Value from '../../../components/Value'
 import useEarnings from '../../../hooks/useEarnings'
 import useReward from '../../../hooks/useReward'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+import { useTranslation } from "react-i18next";
 
 interface HarvestProps {
   pid: number
@@ -18,7 +19,7 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
   const earnings = useEarnings(pid)
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useReward(pid)
-
+  const { t } = useTranslation()
   return (
     <Card>
       <CardContent>
@@ -26,12 +27,12 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
           <StyledCardHeader>
             <CardIcon>🏆</CardIcon>
             <Value value={getBalanceNumber(earnings)} />
-            <Label text="WELB Earned" />
+            <Label text={ t("farms.farm-selected.harvest.title", { _tokenName: "WELB" }) } />
           </StyledCardHeader>
           <StyledCardActions>
             <Button
               disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? 'Collecting WELB' : 'Harvest'}
+              text={pendingTx ? t("farms.farm-selected.harvest.collect", { _tokenName: "WELB" })  : t("farms.farm-selected.harvest.harvest")}
               onClick={async () => {
                 setPendingTx(true)
                 await onReward()

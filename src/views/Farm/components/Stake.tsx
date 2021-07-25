@@ -20,6 +20,7 @@ import useUnstake from '../../../hooks/useUnstake'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
+import { useTranslation } from "react-i18next";
 
 interface StakeProps {
   lpContract: Contract
@@ -68,6 +69,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
     }
   }, [onApprove, setRequestedApproval])
 
+  const { t } = useTranslation()
   return (
     <Card>
       <CardContent>
@@ -75,7 +77,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
           <StyledCardHeader>
             <CardIcon>👨🏻‍🍳</CardIcon>
             <Value value={getBalanceNumber(stakedBalance)} />
-            <Label text={`${tokenName} Tokens Staked`} />
+            <Label text={ t("farms.farm-selected.lp-stake", { _tokenName: tokenName }) } />
           </StyledCardHeader>
           <StyledCardActions>
             {!allowance.toNumber() ? (
@@ -88,7 +90,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
               <>
                 <Button
                   disabled={stakedBalance.eq(new BigNumber(0))}
-                  text="Unstake"
+                  text={ t("farms.farm-selected.lp-unstake") }
                   onClick={onPresentWithdraw}
                 />
                 <StyledActionSpacer />

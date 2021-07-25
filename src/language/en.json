@@ -50,6 +50,44 @@
       }
     }
   },
+  "farms": {
+    "title": "Select Your Favorite Dishes",
+    "subtitle": {
+      "p1": "Earn WELB tokens by staking WelbSwap V2 SLP Tokens.",
+      "p2": "Note: Current APY includes 2/3rd WELB emission",
+      "p3": "that is locked and will be retroactively",
+      "p4": " disbursed at a later date."
+    },
+    "deposit": "Deposit",
+    "earn": "earn",
+    "select": "Select",
+    "apy-text": "Loading ...",
+    "farm-selected": {
+      "subtitle": "Deposit {{_lpTokenName}} LP-Tokens and earn {{_earnTokenName}}",
+      "info": "⭐️Every time you stake and unstake LP tokens, the contract will automagically harvest WELB rewards for you!",
+      "earned": "{{_lpTokenName}} earned",
+      "lp-stake": "{{_tokenName}} LP-Token Staked",
+      "lp-unstake": "Unstake",
+      "modal": {
+        "withdraw": {
+          "title": "Withdraw {{_tokenName}} LP-Token"
+        },
+        "desposit": {
+          "title": "Deposit {{_tokenName}} LP-Tokens"
+        },
+        "btn": {
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "pending": "Pending Confirm"
+        }
+      },
+      "harvest": {
+        "title": "{{_tokenName}} earned",
+        "harvest": "Harvest",
+        "collect": "Collecting {{_tokenName}}"
+      }
+    }
+  },
   "balances": {
     "yourwelb": "Your WELB Balance",
     "totalwelb": "Total WELB Supply",

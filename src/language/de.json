@@ -50,6 +50,44 @@
       }
     }
   },
+  "farms": {
+    "title": "Wähle deine lieblings Farm",
+    "subtitle": {
+      "p1": "Verdienen Sie WELB-Token, indem Sie WelbSwap V2 SLP-Token Staken.",
+      "p2": "Hinweis: Aktueller APY beinhaltet 2/3. WELB-Emission,",
+      "p3": " die gesperrt ist und zu einem späteren Zeitpunkt",
+      "p4": " rückwirkend ausgezahlt wird."
+    },
+    "deposit": "Stake",
+    "earn": "verdiene",
+    "select": "Auswählen",
+    "apy-text": "Laden ...",
+    "farm-selected": {
+      "subtitle": "Setzen Sie {{_lpTokenName}} LP-Token und verdiene {{_earnTokenName}}",
+      "info": "⭐️Jedes Mal, wenn Sie LP-Token Setzen und entfernen, erntet der Vertrag automatisch WELB-Belohnungen für Sie!",
+      "earned": "{{_lpTokenName}} verdient",
+      "lp-stake": "{{_tokenName}} LP-Token eingesetzt",
+      "lp-unstake": "Entfernen",
+      "modal": {
+        "withdraw": {
+          "title": "{{_tokenName}} LP-Token Abheben"
+        },
+        "desposit": {
+          "title": "{{_tokenName}} LP-Token Einzahlen"
+        },
+        "btn": {
+          "cancel": "Abbrechen",
+          "confirm": "Bestätigen",
+          "pending": "Ausstehende Bestätigung"
+        }
+      },
+      "harvest": {
+        "title": "{{_tokenName}} verdient",
+        "harvest": "Belohnung Anfordern",
+        "collect": "{{_tokenName}}-Sammeln"
+      }
+    }
+  },
   "balances": {
     "yourwelb": "Dein WELB Guthaben",
     "totalwelb": "Gesamte WELB Versorgung",
@@ -61,7 +99,7 @@
     "unlock": "Wallet Verbinden",
     "unlock-icon": "\uD83D\uDD13 Wallet Verbinden",
     "lock": "Abmelden",
-    "mywallet": "Mein Wallet",
+    "mywallet": "Meine Wallet",
     "provider": "Wähle einen Wallet Provider",
     "btncancel": "Abbrechen",
     "btnconnect": "Verbinden",

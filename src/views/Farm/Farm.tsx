@@ -12,6 +12,7 @@ import { getMasterChefContract } from '../../welb/utils'
 import { getContract } from '../../utils/erc20'
 import Harvest from './components/Harvest'
 import Stake from './components/Stake'
+import { useTranslation } from "react-i18next";
 
 const Farm: React.FC = () => {
   const { farmId } = useParams()
@@ -54,6 +55,8 @@ const Farm: React.FC = () => {
     return earnToken.toUpperCase()
   }, [earnToken])
 
+  const { t } = useTranslation()
+
   return (
     <>
       <PageHeader
@@ -62,7 +65,7 @@ const Farm: React.FC = () => {
         title=""
       />
       <h1 style={{"textAlign":"center","color":"#fff"}}>{name}</h1>
-      <h2 style={{"textAlign":"center","color":"#fff"}}>Deposit {lpTokenName}  Tokens and earn {earnTokenName}</h2>
+      <h2 style={{"textAlign":"center","color":"#fff"}}>{ t("farms.farm-selected.subtitle",{ _lpTokenName: lpTokenName, _earnTokenName: earnTokenName }) }</h2>
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>
@@ -79,13 +82,12 @@ const Farm: React.FC = () => {
         </StyledCardsWrapper>
         <Spacer size="lg" />
         <StyledInfo>
-          ⭐️ Every time you stake and unstake LP tokens, the contract will
-          automagically harvest WELB rewards for you!
+          { t("farms.farm-selected.info") }
         </StyledInfo>
         <Spacer size="md" />
         <StyledLink
           target="__blank"
-          href={`https://welbswap.vision/pair/${lpTokenAddress}`}
+          href={`https://bscscan.com/address/${lpTokenAddress}`}
         >
           {lpTokenName} Info
         </StyledLink>
