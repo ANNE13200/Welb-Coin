@@ -56,21 +56,10 @@ export const supportedPools = [
     icon: '🥊',
   },
   {
-    pid: 1,
-    lpAddresses: {
-      56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB YOGA!',
-    symbol: 'WELB-WBTCB',
-    tokenSymbol: 'WELB',
-    icon: '🧘',
-  },
+ 
   
     {
-    pid: 2,
+    pid: 1,
     lpAddresses: {
       56: '0x6ef26bbf79bc7db23d05ccc3f6d737dbd8958f8e',
     },
@@ -82,6 +71,19 @@ export const supportedPools = [
     tokenSymbol: 'WELB',
     icon: '🤸‍♀️',
   },
+    
+       pid: 2,
+    lpAddresses: {
+      56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
+    },
+    tokenAddresses: {
+      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
+    },
+    name: 'WELB YOGA!',
+    symbol: 'WELB-WBTCB - UPCOMING',
+    tokenSymbol: 'WELB',
+    icon: '🧘',
+  },
   
    {
     pid: 3,
@@ -92,7 +94,7 @@ export const supportedPools = [
       56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
     name: 'WELB GYM!',
-    symbol: 'WELB-USDT',
+    symbol: 'WELB-USDT - UPCOMING',
     tokenSymbol: 'WELB',
     icon: '🚴‍♂️',
   },
