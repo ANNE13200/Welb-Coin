@@ -72,6 +72,22 @@ export const supportedPools = [
     icon: '🤸‍♀️',
   },
     
+    {
+    pid: 1,
+    lpAddresses: {
+      56: '0x0adb9f62411dba24f9a14cd4b2463343f8be2864',
+    },
+    tokenAddresses: {
+      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
+    },
+    name: 'WELB TRAINER BURGER LP!',
+    symbol: 'WELB-WBNB',
+    tokenSymbol: 'WELB',
+    icon: '🤸‍♀️',
+  },
+    
+    
+    
        pid: 2,
     lpAddresses: {
       56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
