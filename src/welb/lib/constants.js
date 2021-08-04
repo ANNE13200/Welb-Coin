@@ -55,7 +55,7 @@ export const supportedPools = [
     tokenSymbol: 'WELB',
     icon: '🥊',
   },
-  {
+ 
  
   
     {
@@ -87,7 +87,7 @@ export const supportedPools = [
   },
     
     
-    
+  {
        pid: 2,
     lpAddresses: {
       56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
