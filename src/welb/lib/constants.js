@@ -87,19 +87,7 @@ export const supportedPools = [
   },
     
     
-  {
-       pid: 2,
-    lpAddresses: {
-      56: '0x166c60047ab806d120f5c2d3f29bd0f334dfda4a',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB YOGA!',
-    symbol: 'WELB-WBTCB - UPCOMING',
-    tokenSymbol: 'WELB',
-    icon: '🧘',
-  },
+
   
    {
     pid: 3,
