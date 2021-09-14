@@ -104,13 +104,13 @@ export const supportedPools = [
    {
     pid: 3,
     lpAddresses: {
-      56: '0xfbb612f993b5270849fb817b4a89e140dc0480f6',
+      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
     tokenAddresses: {
       56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
     },
-    name: 'WELB GYM!',
-    symbol: 'WELB-USDT - UPCOMING',
+    name: 'WELB MINT!',
+    symbol: 'WELB-WELB',
     tokenSymbol: 'WELB',
     icon: '🚴‍♂️',
   },
