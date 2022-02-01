@@ -1,6 +1,7 @@
 body {
   background-image: url(assets/img/bg.jpg);
   background-repeat: no-repeat;
+  background-size: 100%
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
