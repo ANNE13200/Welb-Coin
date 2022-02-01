@@ -1,5 +1,5 @@
 body {
-  background-image: url(assets/img/bg.jpg);
+  background-image: url(assets/img/bg.jpg) no-repeat;
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
