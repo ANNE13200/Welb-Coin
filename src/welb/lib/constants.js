@@ -43,64 +43,18 @@ export const contractAddresses = {
 
 export const supportedPools = [
   {
-    pid: 0,
-    lpAddresses: {
-      56: '0x69eee8735f97144dbd2ce66a63ff999dca60e2d7',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB BOXE!',
-    symbol: 'WELB-WBNB',
-    tokenSymbol: 'WELB',
-    icon: '🥊',
+   // pid: 0,
+    // lpAddresses: {
+     // 56: '0x69eee8735f97144dbd2ce66a63ff999dca60e2d7',
+    // },
+   // tokenAddresses: {
+     // 56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
+   // },
+   // name: 'WELB BOXE!',
+    // symbol: 'WELB-WBNB',
+   // tokenSymbol: 'WELB',
+   // icon: '🥊',
   },
  
- 
-  
-    {
-    pid: 1,
-    lpAddresses: {
-      56: '0x6ef26bbf79bc7db23d05ccc3f6d737dbd8958f8e',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB FINESS!',
-    symbol: 'WELB-BUSD',
-    tokenSymbol: 'WELB',
-    icon: '🤸‍♀️',
-  },
-    
-    {
-    pid: 2,
-    lpAddresses: {
-      56: '0x0adb9f62411dba24f9a14cd4b2463343f8be2864',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB TRAINER BURGER LP!',
-    symbol: 'WELB-WBNB',
-    tokenSymbol: 'WELB',
-    icon: '🤸‍♀️',
-  },
-    
-    
-
-  
-   {
-    pid: 3,
-    lpAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    tokenAddresses: {
-      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-    },
-    name: 'WELB MINT!',
-    symbol: 'WELB-WELB',
-    tokenSymbol: 'WELB',
-    icon: '🚴‍♂️',
-  },
  
 ]
