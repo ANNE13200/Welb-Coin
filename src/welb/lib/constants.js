@@ -43,17 +43,17 @@ export const contractAddresses = {
 
 export const supportedPools = [
   {
-   // pid: 0,
-    // lpAddresses: {
-     // 56: '0x69eee8735f97144dbd2ce66a63ff999dca60e2d7',
-    // },
-   // tokenAddresses: {
-     // 56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
-   // },
-   // name: 'WELB BOXE!',
-    // symbol: 'WELB-WBNB',
-   // tokenSymbol: 'WELB',
-   // icon: '🥊',
+    pid: 4,
+     lpAddresses: {
+      56: '0x4cb19e3cee859e0cfc44b256eb5e18f70f3ad93e',
+     },
+    tokenAddresses: {
+      56: '0x6AF2a7CA07dC6e234A1E3Fc4450b343ff994B1e6',
+    },
+    name: 'WELB BOXE!',
+     symbol: 'WELB-WELB V2',
+    tokenSymbol: 'WELB',
+    icon: '🥊',
   },
  
  
